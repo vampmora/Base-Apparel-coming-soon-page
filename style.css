@@ -1,0 +1,244 @@
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+  *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+
+  :root{
+      --desaturated-red: hsl(0, 36%, 70%);
+      --soft-red: hsl(0, 93%, 68%);
+  }
+
+  
+  body{
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: linear-gradient(135deg,hsl(0, 0%, 100%),hsl(0, 100%, 98%))
+    
+  }
+
+  header{
+      display:block;
+      margin:30px;
+  }
+
+  .container{
+     display: flex; 
+     justify-content:flex-end;
+     align-items: center;
+     min-height: 100vh;
+     width:100%;
+     flex-direction: column-reverse;
+     text-align: center;
+  }
+
+  .container .right-side{
+      background-image: url(./images/hero-mobile.jpg);
+     width:100%;
+     height:41vh;
+     background-size: cover;
+     background-position: center;  /**/
+  }
+
+  .container .left-side{
+      height: auto;
+      width:100%;
+      padding:50px 35px;
+  }
+
+   .container .left-side span{
+      color:var(--desaturated-red);
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 3rem;
+      margin-bottom: 50px;
+  }
+
+  .container .left-side h1{
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      line-height: 50px;
+      font-size: 3rem;
+  }
+
+  .container .left-side p{
+      color: var(--desaturated-red);
+      line-height: 25px;
+      padding :30px  1px;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: .9rem;
+  } 
+
+  .container form {
+      width:100%;
+      height:20vh ;
+      position: relative;
+      display: block;  /**/
+      margin: 0 auto; /**/
+  }
+
+  .container form .input{
+      position: absolute;
+      left:70px;
+      width:100%;
+      left:0;
+      top:0;
+     /* height:40px;*/
+      padding:15px;
+      border-radius: 50px; 
+      outline: none;  /**/
+      border:solid 1px var(--desaturated-red);
+
+  }
+  ::placeholder{
+      color: var(--desaturated-red);
+      padding:10px;
+  }
+
+
+  .container form button{
+      position: absolute;
+      right: 0px;
+      bottom: 10;
+      width:70px;
+      padding:12px;
+      border-radius: 30px;
+      border: none;
+      background-image: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    
+  }
+
+  .container form button:hover{
+      cursor: pointer;
+      box-shadow: 0  1px 10px 1px var(--desaturated-red)
+  }
+
+/*Error icon and message*/
+
+/*error Icon*/
+.container form .error-icon{
+    position: absolute;
+   right:80px;
+   top:13px;
+   display: none;
+}
+
+/*error message*/
+.container .error-message{
+    position: absolute;
+    top:25px;
+    left:25px;
+    display: none;
+}
+
+/*error class from JS */
+.container form.error .error-icon{ 
+    display: block;
+}
+
+.container form.error .error-message{
+    display: block;
+}
+
+
+/*footer*/
+  footer .attribution{
+    margin:10px; 
+    font-size: .8rem; 
+    /*padding-left:120px */
+    text-align: center;
+    padding :20px 5px;
+    line-height: 20px;
+
+  }
+
+
+/*TRYING AGAIN THE MEDIA PART*/
+
+@media only screen and (min-width:788px){
+
+    header{
+       /*display:none;*/
+       position: absolute;
+      /* margin: 70px;*/
+      padding-left: 70px;  /*   100px => 10% but 70 better 4 nw*/
+      padding-top: 20px;
+    }
+
+    .container {
+        flex-direction: row;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .container .right-side {
+     background-image: url(./images/hero-desktop.jpg);
+     height: 100vh;
+     width:80%;
+    }
+
+    .container .left-side {
+      text-align: left;  
+      width:100%;
+      height:100vh;
+      padding-top: 212px;  /*28vh*/
+      padding-left: 100px;  /*10%*/
+      background-image: url(./images/bg-pattern-desktop.svg);
+      background-size: cover;
+      background-position: -50px bottom;
+    }
+
+    .container .left-side span {
+        letter-spacing: 15px;
+    }
+    
+    .container .left-side h1{
+        letter-spacing: 15px;
+        line-height: 55px;
+    }
+
+    .container .left-side p{
+        font-weight: 600;
+        width:65%;
+        text-align: left;
+    }
+
+    .container form{
+        position: absolute;
+        width:33%;
+    }
+
+    footer .attribution{ /*may remove */
+       /* position: relative;
+        right:0;
+        bottom: 0;
+        width:50%;
+        padding-top: 30px;
+    */
+    display: flex;
+    padding: 0 10px;
+    position: absolute;
+    bottom:10px;
+    left:200px;
+   
+    }
+    
+}
+/*i may remove this media down*/
+@media only screen and (min-width:1020px) {
+
+      footer .attribution {
+        display: flex;
+        padding: 0 10px;
+        position: absolute;
+        bottom:-100px;
+        left:200px;
+      }
+}
