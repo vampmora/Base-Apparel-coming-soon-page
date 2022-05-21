@@ -29,43 +29,6 @@ const validateEmail = (email) => {
   };
 
 
-// function validateEmail(email){
-//     let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-//     return re.test(string(email).toLowerCase());
-// }
-
-
-
-// const validateEmail = (email) => {
-//         return String(email)
-//           .toLowerCase()
-//           .match(
-//             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-//           );
-//       };
-
-
-
-// function validateEmail(email){
-//         let reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
-//         if(reg.test(email)){
-//             return true;
-//         } else {
-//             console.log('hell nooooo');
-//         }
-//         // alert('Please enter valid email.');
-//         // return false;
-//     }
-
-
-
-// const validateEmail = (email) => {
-//     return String(email)
-//       .toLowerCase()
-//       .match(
-//         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-//       );
-//   };
 
 
 
