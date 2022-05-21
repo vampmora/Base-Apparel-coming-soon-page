@@ -1,7 +1,3 @@
-
-
-
-
 const form = document.querySelector('form');
 const email = document.querySelector('input');
 
